@@ -1,0 +1,45 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+.logo__symbol {
+  flex-shrink: 0;
+  display: block;
+}
+
+.logo__wordmark {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-ink);
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.logo__wordmark-a {
+  display: inline-block;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  vertical-align: middle;
+}
+
+/* Footer / Dark theme adaptability */
+.footer .logo__wordmark {
+  color: #FFFFFF !important;
+}
+
+.footer .logo__wordmark-a path {
+  stroke: #FFFFFF !important;
+}

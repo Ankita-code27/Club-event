@@ -1,0 +1,37 @@
+.mission-section {
+  padding: var(--space-8) 0;
+  position: relative;
+}
+
+.mission__header {
+  max-width: 680px;
+  margin-bottom: var(--space-6);
+}
+
+.mission__title {
+  font-size: var(--text-2xl);
+  font-weight: 750;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.025em;
+}
+
+.mission__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.mission__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 860px) {
+  .mission__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

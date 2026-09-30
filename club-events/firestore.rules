@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // All reads and writes go through the Express backend using the
+    // Firebase Admin SDK, which bypasses these rules entirely. Denying all
+    // direct client access here means a leaked web API key alone can never
+    // read or write Firestore data.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
